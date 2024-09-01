@@ -1,0 +1,124 @@
+:root {
+    --elem-radius: 8px;
+    --color-grey: #dcdcdc;
+    --color-dark-grey: #535353;
+    --border-line-grey: 1px solid var(--color-grey);
+    --border-line--dark-grey: 1px solid var(--color-dark-grey);
+    --inner-padding: 10px;
+    --big-inner-padding: 15px;
+}
+
+.helpdesk,
+.helpdesk * {
+    box-sizing: border-box;
+}
+
+.helpdesk textarea {
+    resize: none;
+}
+
+.helpdesk {
+    border-radius: var(--elem-radius);
+    border: var(--border-line--dark-grey);
+}
+
+.helpdesk:before {
+    content: "";
+    display: block;
+    height: 30px;
+    background: var(--color-dark-grey);
+}
+
+.help-desk__top {
+    padding: var(--big-inner-padding);
+}
+
+.help-desk__bottom {
+    padding: var(--big-inner-padding);
+}
+
+.help-desk__tiket-list {
+    border: var(--border-line--dark-grey);
+}
+
+[data-type-btn="ticket-status"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: var(--border-line--dark-grey);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.active-form__wrapp {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    padding: var(--big-inner-padding);
+    border: var(--border-line--dark-grey);
+    width: 400px;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.widget-form {
+    display: grid;
+    gap: 15px;
+    color: var(--color-dark-grey);
+    font-size: 16px;
+}
+
+.form__title {
+    display: block;
+    text-align: center;
+}
+
+.form__body {
+    display: grid;
+    gap: 15px;
+}
+
+.form__bottom {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
+
+.form__bottom button {
+    border: var(--border-line--dark-grey);
+    padding: 10px 15px;
+    border-radius: var(--elem-radius);
+    background: #fff;
+}
+
+.ticket {
+    display: grid;
+    grid-template-columns: 60px calc(95% - 60px) auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket__center {
+    padding: var(--big-inner-padding);
+    display: grid;
+    gap: 15px;
+}
+
+.ticket__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket__descr {
+    display: none;
+}
+
+.ticket__descr.active {
+    display: block;
+}
